@@ -1,0 +1,48 @@
+App 650654 output: /opt/passenger-5.3.7-4.el6.cloudlinux/src/helper-scripts/wsgi-loader.py:26: DeprecationWarning: the imp module is deprecated in favour of importlib; see the module's documentation for alternative uses
+App 650654 output:   import sys, os, re, imp, threading, signal, traceback, socket, select, struct, logging, errno
+App 650654 output: Traceback (most recent call last):
+App 650654 output:   File "/opt/passenger-5.3.7-4.el6.cloudlinux/src/helper-scripts/wsgi-loader.py", line 369, in <module>
+App 650654 output:     app_module = load_app()
+App 650654 output: 
+App 650654 output:   File "/opt/passenger-5.3.7-4.el6.cloudlinux/src/helper-scripts/wsgi-loader.py", line 76, in load_app
+App 650654 output:     return imp.load_source('passenger_wsgi', startup_file)
+App 650654 output: 
+App 650654 output:   File "/home/whassbbc/virtualenv/telegram_bot_covid19/3.8/lib64/python3.8/imp.py", line 171, in load_source
+App 650654 output:     module = _load(spec)
+App 650654 output: 
+App 650654 output:   File "<frozen importlib._bootstrap>", line 702, in _load
+App 650654 output:   File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+App 650654 output:   File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+App 650654 output:   File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+App 650654 output:   File "/home/whassbbc/telegram_bot_covid19/passenger_wsgi.py", line 4, in <module>
+App 650654 output:     from c19bot import app as application
+App 650654 output: 
+App 650654 output:   File "/home/whassbbc/telegram_bot_covid19/c19bot.py", line 6, in <module>
+App 650654 output:     import flask
+App 650654 output: 
+App 650654 output: ModuleNotFoundError: No module named 'flask'
+App 652455 output: /opt/passenger-5.3.7-4.el6.cloudlinux/src/helper-scripts/wsgi-loader.py:26: DeprecationWarning: the imp module is deprecated in favour of importlib; see the module's documentation for alternative uses
+App 652455 output:   import sys, os, re, imp, threading, signal, traceback, socket, select, struct, logging, errno
+App 652455 output: Traceback (most recent call last):
+App 652455 output:   File "/opt/passenger-5.3.7-4.el6.cloudlinux/src/helper-scripts/wsgi-loader.py", line 369, in <module>
+App 652455 output:     
+App 652455 output: app_module = load_app()
+App 652455 output:   File "/opt/passenger-5.3.7-4.el6.cloudlinux/src/helper-scripts/wsgi-loader.py", line 76, in load_app
+App 652455 output:     return imp.load_source('passenger_wsgi', startup_file)
+App 652455 output:   File "/home/whassbbc/virtualenv/telegram_bot_covid19/3.8/lib64/python3.8/imp.py", line 171, in load_source
+App 652455 output:     module = _load(spec)
+App 652455 output:   File "<frozen importlib._bootstrap>", line 702, in _load
+App 652455 output:   File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+App 652455 output:   File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+App 652455 output:   File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+App 652455 output:   File "/home/whassbbc/telegram_bot_covid19/passenger_wsgi.py", line 4, in <module>
+App 652455 output:     from c19bot import app as application
+App 652455 output:   File "/home/whassbbc/telegram_bot_covid19/c19bot.py", line 6, in <module>
+App 652455 output:     import flask
+App 652455 output: ModuleNotFoundError: No module named 'flask'
+App 719568 output: /opt/passenger-5.3.7-4.el6.cloudlinux/src/helper-scripts/wsgi-loader.py:26: DeprecationWarning: the imp module is deprecated in favour of importlib; see the module's documentation for alternative uses
+App 719568 output:   import sys, os, re, imp, threading, signal, traceback, socket, select, struct, logging, errno
+App 720338 output: /opt/passenger-5.3.7-4.el6.cloudlinux/src/helper-scripts/wsgi-loader.py:26: DeprecationWarning: the imp module is deprecated in favour of importlib; see the module's documentation for alternative uses
+App 720338 output:   import sys, os, re, imp, threading, signal, traceback, socket, select, struct, logging, errno
+App 547053 output: /opt/passenger-5.3.7-4.el6.cloudlinux/src/helper-scripts/wsgi-loader.py:26: DeprecationWarning: the imp module is deprecated in favour of importlib; see the module's documentation for alternative uses
+App 547053 output:   import sys, os, re, imp, threading, signal, traceback, socket, select, struct, logging, errno

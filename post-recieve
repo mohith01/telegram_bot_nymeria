@@ -1,0 +1,2 @@
+#!/bin/sh
+GIT_WORK_TREE=/telegram_bot_covid19 git checkout -f
