@@ -18,3 +18,4 @@ six
 tornado
 urllib3
 Werkzeug
+oauth2client

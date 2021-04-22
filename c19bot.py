@@ -34,14 +34,17 @@ logging.basicConfig(filename='error.log', level=logging.DEBUG)
 # Another thing for requests in future
 headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.122 Safari/537.36'}
 
-bot = telebot.TeleBot("1753956236:AAEHU-z2sHjqvrO4CENxmCk99kHgGbaC-pQ")
+with open("keys.json", "r") as file:
+    keys = json.loads(file.read());
+
+bot = telebot.TeleBot(keys.telegram_key)
 
 # If modifying these scopes, delete the file token.json.
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly']
 
 # The ID and range of spreadsheet
-SPREADSHEET_ID = '1f2ISwsayDXGMy09gVbRwn1Xed2OL7F9WsIxYlyLAWC4'
-SHEET_NAME = 'Telegram Bot'
+SPREADSHEET_ID = keys.spreadsheet_id
+SHEET_NAME = keys.sheet_name
 
 # Creating the credentials is a process on its own off script.
 credential = ServiceAccountCredentials.from_json_keyfile_name("credentials.json", SCOPES)
@@ -78,3 +81,7 @@ def send_welcome(message):
 def google_drive_test(message):
     values_list = gsheet.row_values(1)
     bot.reply_to(message, "Works" + ', ' . join(values_list))
+
+if __name__ == "__main__":
+    bot.polling()
+    app.run()

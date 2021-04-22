@@ -147,3 +147,7 @@ error.log
 .objects/
 /info
 /hooks
+
+credentials.json
+keys.json
+*.sqlite
