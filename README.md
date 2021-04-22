@@ -12,11 +12,11 @@ This bot is to provide support to the volunteers working in 🆘Query Tracker & 
 - Run `c19bot.py`; or set `FLASK_APP` and do `flask run`
 
 ## Usage
-
+```
 /start - initiates the conversation and prints commands available
 /addResource - Provides interface to add resources.
 /searchResource - Helps you search resources from the Sheet linked.
 /verify - Lets you change the status and verification status of a resource
-
+```
 ## Contributing
 Discuss in the telegram group. If you have a concern/suggestion/feedback, please open an issue.
