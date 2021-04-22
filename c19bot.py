@@ -37,14 +37,14 @@ headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/
 with open("keys.json", "r") as file:
     keys = json.loads(file.read());
 
-bot = telebot.TeleBot(keys.telegram_key)
+bot = telebot.TeleBot(keys['telegram_key'])
 
 # If modifying these scopes, delete the file token.json.
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly']
 
 # The ID and range of spreadsheet
-SPREADSHEET_ID = keys.spreadsheet_id
-SHEET_NAME = keys.sheet_name
+SPREADSHEET_ID = keys['spreadsheet_id']
+SHEET_NAME = keys['sheet_name']
 
 # Creating the credentials is a process on its own off script.
 credential = ServiceAccountCredentials.from_json_keyfile_name("credentials.json", SCOPES)
@@ -82,6 +82,6 @@ def google_drive_test(message):
     values_list = gsheet.row_values(1)
     bot.reply_to(message, "Works" + ', ' . join(values_list))
 
-if __name__ == "__main__":
-    bot.polling()
-    app.run()
+#if __name__ == "__main__":
+bot.polling()
+app.run(host='0.0.0.0', port=8080, debug=True)
