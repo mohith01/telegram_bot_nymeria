@@ -18,6 +18,8 @@ from flask import Flask
 from flask import request
 from flask import render_template
 from oauth2client.service_account import ServiceAccountCredentials
+from telebot import types
+import time
 
 # Speeds up requests sometimes, can also cause issues so delete nymeria_cache.sql when needed
 req = requests.Session()
@@ -72,9 +74,40 @@ def receiveMessage():
 ## Start of actual code, we specify commands and then a function which handles the commands.
 
 # start/help - to give intro to all the commands or other stuff
-@bot.message_handler(commands=['start', 'help'])
+
+@bot.message_handler(commands=['start','help])
 def send_welcome(message):
-	bot.reply_to(message, "How can I help you today? send /search to start")
+    bot.reply_to(message,'Welcome Use /lol to send your location :). Check out /test_drive too')
+
+@bot.message_handler(commands=['help'])
+def send_help(message):
+    bot.reply_to(message,'To help')
+
+
+@bot.message_handler(commands=['lol'])
+def send_allstuff(message):
+    markup = types.ReplyKeyboardMarkup()#one_time_keyboard=True)
+    itembtn2 = types.KeyboardButton('contact',request_contact=True)
+    itembtn3 = types.KeyboardButton('location',request_location=True)
+    markup.add(itembtn2, itembtn3)
+
+    msg = bot.reply_to(message,"Try sending location",reply_markup=markup)
+    bot.register_next_step_handler(msg,loc_cont_handling)
+
+def loc_cont_handling(message):
+    try:
+        chat_id = message.chat.id
+        if (message.location):
+            print(message.location)
+            bot.reply_to(message,'Nice got your location')
+
+        if (message.contact):
+            print(message.contact)
+            bot.reply_to(message,'Nice got your contact')
+
+        markup = None
+    except:
+        bot.reply_to(message,'sad chec')
 
 # testing google drive integration
 @bot.message_handler(commands=['test_drive'])
