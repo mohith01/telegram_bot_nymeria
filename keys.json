@@ -1,0 +1,6 @@
+{
+	"telegram_key" : "",
+	"spreadsheet_id" : "",
+	"sheet_name" : "",
+  "_comment" : "Create a test bot using @botfather; and add the spreadsheet and worksheet to use for the bot"
+}
